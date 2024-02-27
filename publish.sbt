@@ -6,6 +6,8 @@ publishTo := {
   }
 }
 
+// publishTo := Some(Resolver.file("file",  new File( "/Users/chandrapratapprajapati/published" )) )
+
 publishMavenStyle := true
 
 publishArtifact in Test := false

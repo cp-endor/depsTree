@@ -67,7 +67,7 @@ object DependencyGraphSettings {
 
   val renderingAlternatives: Seq[(TaskKey[Unit], ModuleGraph ⇒ String)] =
     Seq(
-      dependencyTree -> rendering.AsciiTree.asciiTree _,
+      dependencyTreee -> rendering.AsciiTree.asciiTree _,
       dependencyList -> rendering.FlatList.render(_.id.idString),
       dependencyStats -> rendering.Statistics.renderModuleStatsList _,
       licenseInfo -> rendering.LicenseInfo.render _)
@@ -141,7 +141,7 @@ object DependencyGraphSettings {
         output
       },
       // deprecated settings
-      asciiTree := (asString in dependencyTree).value) ++
+      asciiTree := (asString in dependencyTreee).value) ++
       renderingAlternatives.flatMap((renderingTaskSettings _).tupled) ++
       AsciiGraph.asciiGraphSetttings)
 
@@ -202,7 +202,7 @@ object DependencyGraphSettings {
 
   def writeToFile(what: String, data: String, targetFile: File, force: Boolean, streams: TaskStreams): File =
     if (targetFile.exists && !force)
-      throw new RuntimeException(s"Target file for $what already exists at ${targetFile.getAbsolutePath}. Use '-f' to override")
+      throw new RuntimeException(s"Target cpppppppppppppp file for $what already exists at ${targetFile.getAbsolutePath}. Use '-f' to override")
     else {
       IOUtil.writeToFile(data, targetFile)
 
